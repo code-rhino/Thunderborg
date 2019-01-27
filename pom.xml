@@ -35,38 +35,7 @@
         </dependency>
     </dependencies>
 
-    <build>
-        <plugins>
 
-            <!-- JAVA COMPILER -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-            </plugin>
 
-            <!-- INCLUDE SOURCE JAR -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-source-plugin</artifactId>
-            </plugin>
-
-            <!-- INCLUDE JAVADOC JAR -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-javadoc-plugin</artifactId>
-            </plugin>
-
-            <!-- GENERATE LICENSE HEADERS IN SOURCE FILES -->
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>license-maven-plugin</artifactId>
-            </plugin>
-
-            <!-- DOWNLOAD LICENSE, README & NOTICE ARTIFACTS -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-dependency-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
 </project>
+
