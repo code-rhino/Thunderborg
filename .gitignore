@@ -12,6 +12,8 @@
 
 *.iml
 
+target/*
+
 # Generated files
 .idea/**/contentModel.xml
 

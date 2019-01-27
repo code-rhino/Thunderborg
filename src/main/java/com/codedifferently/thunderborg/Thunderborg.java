@@ -1,4 +1,4 @@
-package com.codedifferently.javapi.thunderborg;
+package com.codedifferently.thunderborg;
 
 import com.pi4j.io.i2c.I2CBus;
 import com.pi4j.io.i2c.I2CDevice;
@@ -35,6 +35,7 @@ public class Thunderborg {
     public static void main (String[] args){
         I2CBus I2C_BUS;
         I2CDevice Thunderborg;
+        System.out.println("Hello pi");
 
 
         try {
@@ -45,6 +46,7 @@ public class Thunderborg {
         }catch(IOException exception){
             System.out.println("Failed");
         }
+        
     }
 
 

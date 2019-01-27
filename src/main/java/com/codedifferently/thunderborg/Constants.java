@@ -1,4 +1,4 @@
-package com.codedifferently.javapi.thunderborg;
+package com.codedifferently.thunderborg;
 
 public final class Constants {
     public static final byte I2C_SLAVE                  = (byte) 0X0703;
