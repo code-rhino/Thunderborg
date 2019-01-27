@@ -42,11 +42,16 @@ public class Thunderborg {
             I2C_BUS = I2CFactory.getInstance(I2CBus.BUS_1);
             System.out.println("Connected to bus. Ok");
             Thunderborg = I2C_BUS.getDevice(i2cAddress);
-            System.out.print("Device id " + Thunderborg.read(Constants.COMMAND_GET_ID));
+            System.out.println("Device id " + Thunderborg.read(Constants.COMMAND_GET_ID));
+            if (Constants.I2C_ID_THUNDERBORG  == Thunderborg.read(Constants.COMMAND_GET_ID)){
+                System.out.println("Found Thunderborg");
+            } else {
+                System.out.println("no Thunderborg");
+            }
         }catch(IOException exception){
             System.out.println("Failed");
         }
-        
+
     }
 
 
