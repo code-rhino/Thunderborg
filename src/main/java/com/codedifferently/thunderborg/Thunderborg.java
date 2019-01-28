@@ -3,7 +3,6 @@ package com.codedifferently.thunderborg;
 import com.pi4j.io.i2c.I2CBus;
 import com.pi4j.io.i2c.I2CDevice;
 import com.pi4j.io.i2c.I2CFactory;
-import com.pi4j.wiringpi.SoftPwm;
 
 import java.io.IOException;
 
@@ -38,14 +37,12 @@ public class Thunderborg {
 
 
             Thunderborg.write(Constants.COMMAND_SET_A_FWD, (byte) Constants.PWM_MAX);
-            //Thread.sleep(50l);
             Thunderborg.write(Constants.COMMAND_SET_B_FWD, (byte) Constants.PWM_MAX);
 
             //System.out.println("Motor on");
 
             Thread.sleep(2000l);
             Thunderborg.write(Constants.COMMAND_SET_A_FWD, (byte) 0);
-            //Thread.sleep(50l);
             Thunderborg.write(Constants.COMMAND_SET_B_FWD, (byte) 0);
 
 
