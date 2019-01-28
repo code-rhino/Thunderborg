@@ -33,14 +33,14 @@ public class Thunderborg {
 
 
             Thunderborg.write(Constants.COMMAND_SET_A_FWD, (byte) Constants.PWM_MAX);
-            Thread.sleep(500l);
+            Thread.sleep(100l);
             Thunderborg.write(Constants.COMMAND_SET_B_FWD, (byte) Constants.PWM_MAX);
 
             //System.out.println("Motor on");
 
             Thread.sleep(2000l);
             Thunderborg.write(Constants.COMMAND_SET_A_FWD, (byte) 0);
-            Thread.sleep(500l);
+            Thread.sleep(100l);
             Thunderborg.write(Constants.COMMAND_SET_B_FWD, (byte) 0);
 
 
