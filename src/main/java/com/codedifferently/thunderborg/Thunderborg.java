@@ -29,12 +29,12 @@ public class Thunderborg {
             System.out.println("Connected to bus. Ok");
             Thunderborg = I2C_BUS.getDevice(Constants.I2C_ID_THUNDERBORG);
             System.out.println("Device id " + Thunderborg.read(Constants.COMMAND_GET_ID));
-            //Thunderborg.write(Constants.COMMAND_SET_A_FWD, (byte) Constants.PWM_MAX);
+            Thunderborg.write(Constants.COMMAND_SET_A_FWD, (byte) Constants.PWM_MAX);
             //Thunderborg.write(Constants.COMMAND_SET_B_FWD, (byte) Constants.PWM_MAX);
 
             //System.out.println("Motor on");
-            //Thread.sleep(2000l);
-           // Thunderborg.write(Constants.COMMAND_SET_A_FWD, (byte) 0);
+            Thread.sleep(2000l);
+            Thunderborg.write(Constants.COMMAND_SET_A_FWD, (byte) 0);
             //Thunderborg.write(Constants.COMMAND_SET_B_FWD, (byte) 0);
 
 
