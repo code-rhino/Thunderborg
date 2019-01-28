@@ -32,7 +32,7 @@ public class Thunderborg {
         }
     }*/
 
-    public static void main (String[] args) throws InterruptedException{
+    public static void main (String[] args){
         I2CBus I2C_BUS;
         I2CDevice Thunderborg;
         System.out.println("Hello pi");
@@ -43,19 +43,17 @@ public class Thunderborg {
             System.out.println("Connected to bus. Ok");
             Thunderborg = I2C_BUS.getDevice(i2cAddress);
             System.out.println("Device id " + Thunderborg.read(Constants.COMMAND_GET_ID));
-            Thunderborg.write(Constants.COMMAND_SET_A_FWD, (byte) Constants.PWM_MAX);
+            //Thunderborg.write(Constants.COMMAND_SET_A_FWD, (byte) Constants.PWM_MAX);
             //Thunderborg.write(Constants.COMMAND_SET_B_FWD, (byte) Constants.PWM_MAX);
 
-            System.out.println("Motor on");
-            Thread.sleep(2000l);
-            Thunderborg.write(Constants.COMMAND_SET_A_FWD, (byte) 0);
+            //System.out.println("Motor on");
+            //Thread.sleep(2000l);
+           // Thunderborg.write(Constants.COMMAND_SET_A_FWD, (byte) 0);
             //Thunderborg.write(Constants.COMMAND_SET_B_FWD, (byte) 0);
 
 
         }catch(IOException exception){
             System.out.println("Failed");
-        } catch (InterruptedException ex){
-            System.out.println(ex.getStackTrace());
         }
 
     }
