@@ -18,20 +18,6 @@ public class Thunderborg {
          printFunction           Function reference to call when printing text, if None "print" is used
      **/
 
-    private int busNumber = 1;
-    private static int i2cAddress = Constants.I2C_ID_THUNDERBORG;
-    private boolean foundChip = false;
-    //printFunction           = None
-    //i2cWrite                = None
-    //i2cRead                 = None
-    /*public static Thunderborg[] ScanForThunderBorg(int busNumber){
-        busNumber = (busNumber == 0 )? 1: busNumber;
-        System.out.format("Scanning I2C bus %d", busNumber);
-        for (int address = 0x03; address < 0x78; address++){
-
-        }
-    }*/
-
     public static void main (String[] args){
         I2CBus I2C_BUS;
         I2CDevice Thunderborg;
@@ -41,7 +27,7 @@ public class Thunderborg {
         try {
             I2C_BUS = I2CFactory.getInstance(I2CBus.BUS_1);
             System.out.println("Connected to bus. Ok");
-            Thunderborg = I2C_BUS.getDevice(i2cAddress);
+            Thunderborg = I2C_BUS.getDevice(Constants.I2C_ID_THUNDERBORG);
             System.out.println("Device id " + Thunderborg.read(Constants.COMMAND_GET_ID));
             //Thunderborg.write(Constants.COMMAND_SET_A_FWD, (byte) Constants.PWM_MAX);
             //Thunderborg.write(Constants.COMMAND_SET_B_FWD, (byte) Constants.PWM_MAX);
@@ -54,6 +40,8 @@ public class Thunderborg {
 
         }catch(IOException exception){
             System.out.println("Failed");
+        } catch (Exception ex){
+            System.out.println("Fuck");
         }
 
     }
