@@ -36,9 +36,9 @@ public class Thunderborg {
             */
 
 
-            Thunderborg.write(Constants.COMMAND_SET_A_FWD, (byte) 100);
+            Thunderborg.write(Constants.COMMAND_SET_A_FWD, (byte) 200);
             Thread.sleep(60l);
-            Thunderborg.write(Constants.COMMAND_SET_B_FWD, (byte) 100);
+            Thunderborg.write(Constants.COMMAND_SET_B_FWD, (byte) 200);
 
             //System.out.println("Motor on");
 
