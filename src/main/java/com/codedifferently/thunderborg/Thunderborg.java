@@ -36,9 +36,9 @@ public class Thunderborg {
             */
 
 
-            Thunderborg.write(Constants.COMMAND_SET_A_FWD, (byte) Constants.PWM_MAX);
+            Thunderborg.write(Constants.COMMAND_SET_A_FWD, (byte) 100);
             Thread.sleep(60l);
-            Thunderborg.write(Constants.COMMAND_SET_B_FWD, (byte) Constants.PWM_MAX);
+            Thunderborg.write(Constants.COMMAND_SET_B_FWD, (byte) 100);
 
             //System.out.println("Motor on");
 
